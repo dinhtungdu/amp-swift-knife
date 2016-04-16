@@ -39,6 +39,7 @@ require_once( TF_PATH . 'lib/class-customizer.php' );
 require_once( TF_PATH . 'lib/class-meta-box.php' );
 require_once( TF_PATH . 'lib/class-option.php' );
 require_once( TF_PATH . 'lib/class-option-ajax-button.php' );
+require_once( TF_PATH . 'lib/class-option-amp-customizer.php' );
 require_once( TF_PATH . 'lib/class-option-checkbox.php' );
 require_once( TF_PATH . 'lib/class-option-code.php' );
 require_once( TF_PATH . 'lib/class-option-color.php' );

@@ -84,27 +84,26 @@ class AMPSK_Titan {
 		 */
 		$titan = TitanFramework::getInstance( 'ampsk' );
 
-		$settings = $titan->createAdminPage( array(
-				'name'       => __( 'AMP Swift Knife', 'amp-sk' ),
-				'title'      => __( 'AMP Swift Knife Setting', 'amp-sk' ),
-				'id'         => 'amp-sk-settings',
-				'parent'     => 'options-general.php',
-			)
-		);
+                $generalTab = $titan->createAdminPage( array(
+                        'name'       => __( 'AMP Swift Knife', 'amp-sk' ),
+                        'title'      => __( 'AMP Swift Knife Setting', 'amp-sk' ),
+                        'id'         => 'amp-sk-settings',
+                        'parent'     => 'options-general.php',
+		) );
 
 		$customizerHeader = $titan->createThemeCustomizerSection( array(
 			'panel' => 'AMP Swift Knife',
 			'name' => 'Header'
 		) );
 
-		$generalTab = $settings->createTab( array(
-			'name' => 'General Options',
-		) );
+		//$generalTab = $settings->createTab( array(
+			//'name' => 'General Options',
+		//) );
 
 		$generalTab->createOption( array(
 			'name' => 'AMP Endpoint',
 			'desc' => 'If you don\'t want to use the default /amp endpoint',
-			'id' => 'amp_sk_enpoint',
+			'id' => 'amp_sk_endpoint',
 			'type' => 'text',
 			'default' => 'amp'
 		) );
@@ -119,6 +118,11 @@ class AMPSK_Titan {
 			'name'	=> 'Choose menu',
 			'id'	=> 'amp_sk_menu',
 			'type'	=> 'select-menus',
+		) );
+		$generalTab->createOption( array(
+			'name'	=> 'Access customizer',
+			'id'	=> 'amp_sk_customizer',
+			'type'	=> 'amp-customizer',
 		) );
 		$generalTab->createOption( array(
 			'type' => 'save'

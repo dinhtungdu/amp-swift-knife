@@ -135,7 +135,7 @@ function td_amp_instantiate() {
 
 function change_endpoint() {
 	$titan = TitanFramework::getInstance( 'ampsk' );
-	return $titan->getOption('amp_sk_enpoint');
+	return $titan->getOption('amp_sk_endpoint');
 }
 
 add_action( 'plugins_loaded', 'td_amp_instantiate' );
