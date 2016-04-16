@@ -23,5 +23,7 @@ This plugin help you easily extend functions of your website's AMP version. With
 - Add google analytics support.
 
 Note #1: This plugin required AMP plugin be Automattic to work.
+
 Note #2: Setting Page will be at: `wp-admin/options-general.php?page=amp-sk-settings`
+
 Note #3: You can access Customizer form AMP Swift Knife Setting Page.
