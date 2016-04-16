@@ -21,3 +21,5 @@ This plugin help you easily extend functions of your website's AMP version. With
   - Add Custom CSS.
 - Change AMP enpoint.
 - Add google analytics support.
+
+Note #1: This plugin required AMP plugin be Automattic to work.
