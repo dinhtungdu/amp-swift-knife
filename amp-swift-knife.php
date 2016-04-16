@@ -3,7 +3,7 @@
 Plugin Name: AMP Swift Knife
 Plugin URI:  http://dinhtung.info/
 Description: Make your AMP not only fast, but beautiful.
-Version:     0.1-alpha
+Version:     0.1
 Author:      Tung Du
 Author URI:  http://dinhtung.info/
 Text Domain: amp-sk
