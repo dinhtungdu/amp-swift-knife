@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: AMP Swift Knife
+Plugin Name: Swife Knife for AMP
 Plugin URI:  http://dinhtung.info/
 Description: Make your AMP not only fast, but beautiful.
 Version:     0.1
