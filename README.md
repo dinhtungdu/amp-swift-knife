@@ -1,5 +1,5 @@
-# amp-swift-knife
-The WordPress Plugin help creating beautiful AMP Page
+# swift-knife-for-amp
+This WordPress plugins is an addon for official AMP plugin by Automattic.
 
 ## Overview
 
