@@ -85,8 +85,8 @@ class AMPSK_Titan {
 		$titan = TitanFramework::getInstance( 'ampsk' );
 
                 $generalTab = $titan->createAdminPage( array(
-                        'name'       => __( 'AMP Swift Knife', 'amp-sk' ),
-                        'title'      => __( 'AMP Swift Knife Setting', 'amp-sk' ),
+                        'name'       => __( 'Swift Knife for AMP', 'amp-sk' ),
+                        'title'      => __( 'Swift Knife for AMP Setting', 'amp-sk' ),
                         'id'         => 'amp-sk-settings',
                         'parent'     => 'options-general.php',
 		) );
