@@ -70,7 +70,7 @@ class TD_AMP_SK {
 		if(!is_plugin_active( 'amp/amp.php' )) :
 		?>
 		<div class="notice notice-warning">
-			<p><?php _e( 'AMP Swift Knife plugin requires AMP plugin activated to work. Please install it from <a href="https://wordpress.org/plugins/amp" target="_blank">here</a>', 'amp-sk' ); ?></p>
+			<p><?php _e( 'Swift Knife for AMP plugin requires AMP plugin activated to work. Please install it from <a href="https://wordpress.org/plugins/amp" target="_blank">here</a>', 'amp-sk' ); ?></p>
 		</div>
 		<?php endif;
 	}
