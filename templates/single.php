@@ -5,6 +5,7 @@
 	// or an attachment ID to the selected image.
 	$logoSrc = $logoId; // For the default value
 	$logoHeight = $titan->getOption( 'amp_sk_logo_height' );
+$endpoint = $titan->getOption('amp_sk_endpoint');
 	if ( is_numeric( $logoId ) ) {
 		$logoAttachment = wp_get_attachment_image_src( $logoId, 'full' );
 		$logoMeta = wp_get_attachment_metadata( $logoId );
@@ -52,7 +53,7 @@
 		</a>
 		<div class="mwrap">
 			<div class="button-wrap">
-				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+				<div class="menu-icon"><span class="navicon"></span></div>
 			</div>
 			<?php wp_nav_menu( array( 'container' => '', 'menu' => $titan->getOption('amp_sk_menu') )); ?>
 		</div>
@@ -84,11 +85,29 @@
 				));
 
 				//Display the list of comments
-				wp_list_comments(array(
-					'style'       => 'ol',
-					'avatar_size' => 42,
-					'reverse_top_level' => false //Show the latest comments at the top of the list
-				), $comments);
+				foreach( $comments as $comment ) : ?>
+					<li id="comment-<?php echo $comment->comment_ID; ?>" <?php comment_class( '', $comment->comment_ID); ?>>
+						<article id="div-comment-<?php echo $comment->comment_ID; ?>" class="comment-body">
+							<footer class="comment-meta">
+								<div class="comment-author vcard">
+									<amp-img src='<?php echo get_avatar_url(array('size'=> '42')); ?>' class='avatar avatar-42 photo' height='42' width='42' /></amp-img>
+									<b class="fn"><?php echo $comment->comment_author; ?></b> <span class="says">viết:</span>
+								</div><!-- .comment-author -->
+
+								<div class="comment-metadata">
+									<time datetime="2016-02-17T16:50:33+00:00">
+										17 Tháng Hai, 2016 lúc 4:50 chiều
+									</time>
+
+							</footer><!-- .comment-meta -->
+
+							<div class="comment-content">
+								<p><?php esc_html_e($comment->comment_content); ?></p>
+							</div><!-- .comment-content -->
+
+						</article><!-- .comment-body -->
+					</li>
+				<?php endforeach;
 				?>
 			</ol>
 			</div>
@@ -116,7 +135,7 @@
 						<?php $the_query->the_post(); ?>
 						<?php printf(
 							'<li><a href="%1$s" title="%2$s">%2$s</a></li>',
-							esc_url(get_the_permalink()),
+							(esc_url(get_the_permalink()) . '/' . $endpoint),
 							esc_html(get_the_title())
 						); ?>
 					<?php endwhile; ?>

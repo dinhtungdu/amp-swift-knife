@@ -60,7 +60,7 @@ color: <?php echo $font_color; ?>;
 padding-bottom: 100px;
 }
 h1, h2, h3, h4, h5, h6 {
-color: <?php echo $titan->getOption('amp_sk_typo_h_color'); ?>; \
+color: <?php echo $titan->getOption('amp_sk_typo_h_color'); ?>;
 }
 
 h1 {
@@ -230,7 +230,7 @@ overflow: hidden;
 }
 
 .header .menu ul {
-display: none !important;
+display: none;
 }
 
 nav.amp-wp-title-bar .menu li {
@@ -258,8 +258,8 @@ position: relative;
 user-select: none;
 }
 
-.button-wrap {
-margin-top: -<?php echo ( 20 + $logoHeight ); ?>px !important;
+.amp-wp-title-bar .mwrap .button-wrap {
+margin-top: -<?php echo ( 20 + $logoHeight ); ?>px;
 <?php if($titan->getOption('amp_sk_logo_position') == '3') : ?>
 float: left;
 <?php else: ?>
